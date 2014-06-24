@@ -16,7 +16,7 @@
 
 	$sql = "INSERT INTO webpagetest (testID, url, date, average, runs) VALUES('$testID', '$url', '$date', '$average')";
 	if ($stmt->prepare($sql)) {
-    	$stmt->bind_param('iss', $varID, $var1, $var2);
+    	//$stmt->bind_param('iss', $varID, $var1, $var2);
 
     	if ($stmt->execute()) {
         	echo 'insert successful!';   //or something like that
