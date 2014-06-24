@@ -12,7 +12,7 @@
 
 	$url = $xml->data->testUrl;
 	$test_date = date("F j, Y, g:i a", strtotime($xml->data->completed));
-	$average = serialize($xml->data->average);
+	$average = json_encode($xml->data->average);
 
 	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average, runs) VALUES('$testID', '$url', '$test_date', '$average', '')");
 
