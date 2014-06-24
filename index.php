@@ -13,7 +13,8 @@
 	$url = $xml->data->testUrl;
 	$test_date = date("F j, Y, g:i a", strtotime($xml->data->completed));
 	$average = XML2JSON($xml->data->average);
-
+	echo $average;
+	
 	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average, runs) VALUES('$testID', '$url', '$test_date', '$average', '')");
 
 	// or...........
