@@ -11,10 +11,10 @@
 	//var_dump($xml);
 
 	$url = $xml->data->testUrl;
-	$date = $xml->data->completed;
+	$date = date("F j, Y, g:i a", strtotime($xml->data->completed));
 	$average = $xml->data->average;
 
-	mysql_query("INSERT INTO webpagetest (testID, url, date, average, runs) VALUES('$testID', '$url', '$date', '$average', '')");
+	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average, runs) VALUES('$testID', '$url', '$date', '$average', '')");
 
 	// or...........
 	// foreach ($xml->bbb->cccc as $element) {
