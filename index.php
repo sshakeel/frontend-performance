@@ -10,23 +10,25 @@
 	$xml = simplexml_load_file($xml_url);
 	//var_dump($xml);
 
+	
 	$url = $xml->data->testUrl;
+	
 	$test_date = date("F j, Y, g:i a", strtotime($xml->data->completed));
-	$average_fv = array();
-	array_push($average_fv, $xml->data->average->firstView->loadTime);
-	array_push($average_fv, $xml->data->average->firstView->TTFB);
-	array_push($average_fv, $xml->data->average->firstView->connections);
-	array_push($average_fv, $xml->data->average->firstView->requests);
-	array_push($average_fv, $xml->data->average->firstView->responses_404);
-	array_push($average_fv, $xml->data->average->firstView->render);
-	array_push($average_fv, $xml->data->average->firstView->fullyLoaded);
-	array_push($average_fv, $xml->data->average->firstView->score_cache);
-	array_push($average_fv, $xml->data->average->firstView->score_cdn);
-	array_push($average_fv, $xml->data->average->firstView->score_gzip);
-	array_push($average_fv, $xml->data->average->firstView->score_cookies);
-	array_push($average_fv, $xml->data->average->firstView->score_keep-alive);
-	array_push($average_fv, $xml->data->average->firstView->score_minify);
-	array_push($average_fv, $xml->data->average->firstView->score_compress);
+	
+	$average_fv = array('loadTime'=> (string)$xml->data->average->firstView[0]->loadTime, 
+						'TTFB'=> (string)$xml->data->average->firstView[0]->TTFB, 
+						'connections'=> (string)$xml->data->average->firstView[0]->connections, 
+						'requests'=> (string)$xml->data->average->firstView[0]->requests, 
+						'responses_404'=> (string)$xml->data->average->firstView[0]->responses_404, 
+						'render'=> (string)$xml->data->average->firstView[0]->render, 
+						'fullyLoaded'=> (string)$xml->data->average->firstView[0]->fullyLoaded, 
+						'score_cache'=> (string)$xml->data->average->firstView[0]->score_cache, 
+						'score_cdn'=> (string)$xml->data->average->firstView[0]->score_cdn, 
+						'score_gzip'=> (string)$xml->data->average->firstView[0]->score_gzip, 
+						'score_cookies'=> (string)$xml->data->average->firstView[0]->score_cookies, 
+						'score_keep-alive'=> (string)$xml->data->average->firstView[0]->score_keep-alive, 
+						'score_minify'=> (string)$xml->data->average->firstView[0]->score_minify, 
+						'score_compress'=> (string)$xml->data->average->firstView[0]->score_compress);
 	
 	print_r($average_fv);
 
