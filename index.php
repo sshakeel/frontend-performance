@@ -35,7 +35,7 @@
 			<div class="col-md-2">Connection:<br><?php echo $xml->data->connectivity; ?></div>
 			<div class="col-md-2">D/L:<br><?php echo ($xml->data->bwDown)/1000; ?> mbps</div>
 			<div class="col-md-2">U/L:<br><?php echo ($xml->data->bwUp)/1000; ?> mbps</div>
-			<div class="col-md-2">Latency:<br><?php echo $xml->data->average; ?> ms</div>
+			<div class="col-md-2">Latency:<br><?php print_r($xml->data->average); ?> ms</div>
 			<div class="col-md-2">Completed On:<br><?php echo date("F j, Y, g:i a", strtotime($xml->data->completed));?></div>
 		
 		</div>
