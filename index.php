@@ -4,12 +4,17 @@
 <?php 
 	$testID = "140621_Z6_51V";
 
-	$url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
+	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
 
-		$xml = simplexml_load_file($url);
-		//var_dump($xml);
+	$xml = simplexml_load_file($xml_url);
+	//var_dump($xml);
 
+	$url = $xml->data->testUrl;
+	$date = $xml->data->completed;
+	$average = json_encode();
+
+	mysql_query("INSERT INTO webpagetest (testID, url, date, average, runs) VALUES('$type', 'john', 'whatever')");
 	
 
 	// or...........
@@ -30,7 +35,7 @@
 			<div class="col-md-2">Connection:<br><?php echo $xml->data->connectivity; ?></div>
 			<div class="col-md-2">D/L:<br><?php echo ($xml->data->bwDown)/1000; ?> mbps</div>
 			<div class="col-md-2">U/L:<br><?php echo ($xml->data->bwUp)/1000; ?> mbps</div>
-			<div class="col-md-2">Latency:<br><?php echo $xml->data->latency; ?> ms</div>
+			<div class="col-md-2">Latency:<br><?php echo $xml->data->average; ?> ms</div>
 			<div class="col-md-2">Completed On:<br><?php echo date("F j, Y, g:i a", strtotime($xml->data->completed));?></div>
 		
 		</div>
@@ -61,8 +66,6 @@
 		<canvas id="myChart" width="600" height="400"></canvas>
 		<script>
 			
-			
-
 			var data = {
 				labels : ["January","February","March","April","May","June","July"],
 				datasets : [
