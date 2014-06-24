@@ -12,10 +12,25 @@
 
 	$url = $xml->data->testUrl;
 	$test_date = date("F j, Y, g:i a", strtotime($xml->data->completed));
-	$average = $xml->data->average;
-	print_r($average);
+	$average_fv = array();
+	array_push($average, $xml->data->average->firstView->loadTime);
+	array_push($average, $xml->data->average->firstView->TTFB);
+	array_push($average, $xml->data->average->firstView->connections);
+	array_push($average, $xml->data->average->firstView->requests);
+	array_push($average, $xml->data->average->firstView->responses_404);
+	array_push($average, $xml->data->average->firstView->render);
+	array_push($average, $xml->data->average->firstView->fullyLoaded);
+	array_push($average, $xml->data->average->firstView->score_cache);
+	array_push($average, $xml->data->average->firstView->score_cdn);
+	array_push($average, $xml->data->average->firstView->score_gzip);
+	array_push($average, $xml->data->average->firstView->score_cookies);
+	array_push($average, $xml->data->average->firstView->score_keep-alive);
+	array_push($average, $xml->data->average->firstView->score_minify);
+	array_push($average, $xml->data->average->firstView->score_compress);
+	
+	print_r($average_fv);
 
-	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average, runs) VALUES('$testID', '$url', '$test_date', '$average', '')");
+	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average_fv, average_rv, runs) VALUES('$testID', '$url', '$test_date', '$average_fv', '$average_rv', '')");
 
 	// or...........
 	// foreach ($xml->bbb->cccc as $element) {
