@@ -28,9 +28,12 @@
 	}
 
 	$load_times = array();
-	foreach($test_results[$i]['average_fv'] as $average_fv_item){
+	$j=0;
+	foreach($test_results[$j]['average_fv'] as $average_fv_item){
+		echo $average_fv_item['loadTime'];
 		echo intval($average_fv_item['loadTime']);
 		array_push($load_times, intval($average_fv_item['loadTime']));
+		$j++;
 	}
 
 ?>
