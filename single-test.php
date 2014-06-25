@@ -47,6 +47,7 @@
 	print_r($average_fv);
 
 	$average_fv = json_encode($average_fv);
+	$average_rv = json_encode($average_rv);
 	echo $average_fv;
 
 	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average_fv, average_rv, runs) VALUES('$testID', '$url', '$test_date', '$average_fv', '$average_rv', '')");
