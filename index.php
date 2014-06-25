@@ -85,7 +85,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Load Time (First View vs Repeat)</div>
-			<div class="panel-body">
+			<div class="panel-body no-padding">
 				<canvas id="loadTimeChart" width="300" height="200"></canvas>
 					<script>
 
@@ -123,7 +123,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Render Time (First View vs Repeat)</div>
-			<div class="panel-body">
+			<div class="panel-body no-padding">
 				<canvas id="renderChart" width="300" height="200"></canvas>
 					<script>
 
@@ -160,7 +160,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Time to Fully Loaded (First View vs Repeat)</div>
-			<div class="panel-body">
+			<div class="panel-body no-padding">
 				<canvas id="fullyLoadedChart" width="300" height="200"></canvas>
 					<script>
 
@@ -199,7 +199,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Connections (First View vs Repeat)</div>
-			<div class="panel-body">
+			<div class="panel-body no-padding">
 				<canvas id="connectionsChart" width="300" height="200"></canvas>
 					<script>
 
@@ -237,7 +237,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Requests (First View vs Repeat)</div>
-			<div class="panel-body">
+			<div class="panel-body no-padding">
 				<canvas id="requestsChart" width="300" height="200"></canvas>
 					<script>
 
@@ -274,7 +274,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Responses_404 (First View vs Repeat)</div>
-			<div class="panel-body">
+			<div class="panel-body no-padding">
 				<canvas id="r404Chart" width="300" height="200"></canvas>
 					<script>
 

@@ -6,12 +6,10 @@
 	<script src="js/chart.js"></script>
 
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
 	
 	<title></title>
 </head>
 
-<style>
-	.no-padding {padding: 0;}
-</style>
 <body>
 	<div class="container">
