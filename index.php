@@ -25,16 +25,29 @@
 		$test_results[$i]['average_fv'] = json_decode($row['average_fv'], true);
 		print_r($test_results[$i]['average_fv']);
 		echo "<hr><hr>";
+
+		$test_results[$i]['average_rv'] = json_decode($row['average_rv'], true);
+		print_r($test_results[$i]['average_rv']);
+		echo "<hr><hr>";
+
 		$i++;
 	}
 
-	$load_times = array();
+	$avg_load_times_fv = array();
 	foreach($test_results as $test_results_item){
 		echo "Load Time: ".$test_results_item['average_fv']['loadTime']."<br>";
 		echo "Load Time(int): ".(int)$test_results_item['average_fv']['loadTime']."<br><hr>";
-		array_push($load_times, (int)$test_results_item['average_fv']['loadTime']);
+		array_push($avg_load_times_fv, (int)$test_results_item['average_fv']['loadTime']);
 	}
-	print_r($load_times);
+	print_r($avg_load_times_fv);
+
+	$avg_load_times_rv = array();
+	foreach($test_results as $test_results_item){
+		echo "Load Time: ".$test_results_item['average_rv']['loadTime']."<br>";
+		echo "Load Time(int): ".(int)$test_results_item['average_rv']['loadTime']."<br><hr>";
+		array_push($avg_load_times_rv, (int)$test_results_item['average_rv']['loadTime']);
+	}
+	print_r($avg_load_times_rv);
 ?>
 
 <div class="row">
@@ -50,14 +63,14 @@
 						strokeColor : "rgba(220,220,220,1)",
 						pointColor : "rgba(220,220,220,1)",
 						pointStrokeColor : "#fff",
-						data : [<?php echo implode(',', $load_times); ?>]
+						data : [<?php echo implode(',', $avg_load_times_fv); ?>]
 					},
 					{
 						fillColor : "rgba(151,187,205,0.5)",
 						strokeColor : "rgba(151,187,205,1)",
 						pointColor : "rgba(151,187,205,1)",
 						pointStrokeColor : "#fff",
-						data : [28,48,40,19,96,27,0]
+						data : [<?php echo implode(',', $avg_load_times_fv); ?>]
 					}
 				]
 			}
