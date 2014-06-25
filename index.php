@@ -67,8 +67,8 @@
 		array_push($avg_fullyLoaded_times_fv, ($test_results_item['average_fv']['fullyLoaded'])/1000);
 		array_push($avg_fullyLoaded_times_rv, ($test_results_item['average_rv']['fullyLoaded'])/1000);
 
-		array_push($avg_requests_fv, $test_results_item['average_fv']['connections']);
-		array_push($avg_requests_rv, $test_results_item['average_rv']['connections']);
+		array_push($avg_connections_fv, $test_results_item['average_fv']['connections']);
+		array_push($avg_connections_fv, $test_results_item['average_rv']['connections']);
 
 		array_push($avg_requests_fv, $test_results_item['average_fv']['requests']);
 		array_push($avg_requests_rv, $test_results_item['average_rv']['requests']);
