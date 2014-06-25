@@ -68,7 +68,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Load Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="loadTimeChart" width="100" height="100"></canvas>
+				<canvas id="loadTimeChart" width="350" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -106,7 +106,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Render Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="renderChart" width="100" height="100"></canvas>
+				<canvas id="renderChart" width="350" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -143,7 +143,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Time to Fully Loaded (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="fullyLoadedChart" width="100" height="100"></canvas>
+				<canvas id="fullyLoadedChart" width="350" height="200"></canvas>
 					<script>
 
 						var data = {
