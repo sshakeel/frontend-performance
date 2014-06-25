@@ -23,7 +23,8 @@
 		//echo $test_results[$i]['testdate'];
 
 		$test_results[$i]['average_fv'] = json_decode($row['average_fv'], true);
-		//print_r($test_results[$i]['average_fv']);
+		print_r($test_results[$i]['average_fv']);
+		echo "<hr><hr>"
 		$i++;
 	}
 
@@ -36,7 +37,7 @@
 		array_push($load_times, intval($average_fv_item['loadTime']));
 		$j++;
 	}
-
+	print_r($load_times);
 ?>
 
 <div class="row">
