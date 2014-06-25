@@ -41,7 +41,7 @@
 		//echo "Load Time(int): " . (($test_results_item['average_fv']['loadTime'])/1000) . "<br><hr>";
 		array_push($avg_load_times_fv, ($test_results_item['average_fv']['loadTime'])/1000);
 		array_push($avg_load_times_rv, ($test_results_item['average_rv']['loadTime'])/1000);
-		array_push($test_dates, $test_results_item['testdate']->format('Y-m-d H:i:s'));
+		array_push($test_dates, $test_results_item['testdate']);
 	}
 	//print_r($avg_load_times_fv);
 	//print_r($avg_load_times_rv);
@@ -53,7 +53,7 @@
 		<script>
 
 			var data = {
-				labels : [<?php echo implode(',', $test_dates); ?>],
+				labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 				datasets : [
 					{
 						fillColor : "rgba(220,220,220,0.5)",
