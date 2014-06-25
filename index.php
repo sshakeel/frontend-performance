@@ -49,7 +49,8 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<canvas id="myChart" width="600" height="400"></canvas>
+
+		<canvas id="myChart" width="300" height="200"></canvas>
 		<script>
 
 			var data = {
