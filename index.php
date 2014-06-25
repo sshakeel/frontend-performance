@@ -274,22 +274,22 @@
 	<?php
 		
 		$panel_class = "panel-default"; 
-		
-		$error_count_fv = array_filter(
-					    $avg_404_fv,
-					    function ($value) {
-					        return ($value > 1);
-					    }
-					);
-		$error_count_rv = array_filter(
-					    $avg_404_rv,
-					    function ($value) {
-					        return ($value > 1);
-					    }
-					);
+		$error_count_fv = 0;
+		$error_count_rv = 0;
+
+		foreach ($error_count_fv as $numba) {
+			if($numba>0) {
+				$error_count_fv++;
+			}
+		}
+		foreach ($error_count_rv as $numba) {
+			if($numba>0) {
+				$error_count_rv++;
+			}
+		}
 
 		if($error_count_fv > 0 || $error_count_rv > 0) {
-			$panel_class = "panel-warning";
+			$panel_class = "panel-danger";
 		} 
 	?>
 	<div class="col-md-4">
