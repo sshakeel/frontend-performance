@@ -36,16 +36,16 @@
 	$avg_load_times_fv = array();
 	foreach($test_results as $test_results_item){
 		echo "Load Time: ".$test_results_item['average_fv']['loadTime']."<br>";
-		echo "Load Time(int): ".((int)$test_results_item['average_fv']['loadTime'])/1000."<br><hr>";
-		array_push($avg_load_times_fv, ((int)$test_results_item['average_fv']['loadTime'])/1000);
+		echo "Load Time(int): ".($test_results_item['average_fv']['loadTime'])/1000."<br><hr>";
+		array_push($avg_load_times_fv, ($test_results_item['average_fv']['loadTime'])/1000);
 	}
 	print_r($avg_load_times_fv);
 
 	$avg_load_times_rv = array();
 	foreach($test_results as $test_results_item){
 		echo "Load Time: ".$test_results_item['average_rv']['loadTime']."<br>";
-		echo "Load Time(int): ".((int)$test_results_item['average_rv']['loadTime'])/1000."<br><hr>";
-		array_push($avg_load_times_rv, ((int)$test_results_item['average_rv']['loadTime'])/1000);
+		echo "Load Time(int): ".($test_results_item['average_rv']['loadTime'])/1000."<br><hr>";
+		array_push($avg_load_times_rv, ($test_results_item['average_rv']['loadTime'])/1000);
 	}
 	print_r($avg_load_times_rv);
 ?>
