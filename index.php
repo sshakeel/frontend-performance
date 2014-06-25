@@ -24,7 +24,7 @@
 
 		$test_results[$i]['average_fv'] = json_decode($row['average_fv'], true);
 		print_r($test_results[$i]['average_fv']);
-		echo "<hr><hr>"
+		echo "<hr><hr>";
 		$i++;
 	}
 
