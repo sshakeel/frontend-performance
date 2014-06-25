@@ -3,10 +3,23 @@
 <?php include("header.php"); ?>
 <?php 
 	
-	
-	// $result = mysql_query("SELECT * FROM webpagetest WHERE '$where'");
-	// $row = mysql_fetch_array($result);
-	// return $row;
+	$test_results = array();
+
+	$result = mysql_query("SELECT * FROM webpagetest WHERE testdate >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)");
+	$i = 0;
+	while($row = mysql_fetch_array($result)){
+		$test_results[$i]['id'] = $row['id'];
+		$test_results[$i]['testID'] = $row['testID'];
+		$test_results[$i]['url'] = $row['url'];
+		$test_results[$i]['testdate'] = $row['testdate'];
+		$test_results[$i]['average_fv'] = json_decode($row['average_fv'], true);
+		$i++;
+	}
+
+	$load_times = array();
+	foreach($test_results[$i]['average_fv'] as $average_fv_item){
+		array_push($load_times, intval($average_fv_item[loadTime]));
+	}
 
 ?>
 
@@ -15,6 +28,8 @@
 		<canvas id="myChart" width="600" height="400"></canvas>
 		<script>
 			
+			loadTimeData = new array(<?php echo implode(',', $load_times); ?>);
+
 			var data = {
 				labels : ["January","February","March","April","May","June","July"],
 				datasets : [
@@ -23,7 +38,7 @@
 						strokeColor : "rgba(220,220,220,1)",
 						pointColor : "rgba(220,220,220,1)",
 						pointStrokeColor : "#fff",
-						data : [65,59,90,81,56,55,40]
+						data : loadTimeData
 					},
 					{
 						fillColor : "rgba(151,187,205,0.5)",
