@@ -14,7 +14,7 @@
 	$url = $xml->data->testUrl;
 	
 	$test_date = strtotime($xml->data->completed);
-	
+	echo $test_date;
 	$average_fv = array('loadTime'=> (string)$xml->data->average->firstView[0]->loadTime, 
 						'TTFB'=> (string)$xml->data->average->firstView[0]->TTFB, 
 						'connections'=> (string)$xml->data->average->firstView[0]->connections, 
