@@ -277,12 +277,12 @@
 		$error_count_fv = 0;
 		$error_count_rv = 0;
 
-		foreach ($error_count_fv as $numba) {
+		foreach ($avg_404_fv as $numba) {
 			if($numba>0) {
 				$error_count_fv++;
 			}
 		}
-		foreach ($error_count_rv as $numba) {
+		foreach ($avg_404_rv as $numba) {
 			if($numba>0) {
 				$error_count_rv++;
 			}
