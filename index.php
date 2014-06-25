@@ -86,7 +86,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Load Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="loadTimeChart" width="350" height="200"></canvas>
+				<canvas id="loadTimeChart" width="300" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -124,7 +124,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Render Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="renderChart" width="350" height="200"></canvas>
+				<canvas id="renderChart" width="300" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -161,7 +161,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Time to Fully Loaded (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="fullyLoadedChart" width="350" height="200"></canvas>
+				<canvas id="fullyLoadedChart" width="300" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -200,7 +200,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Connections (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="connectionsChart" width="350" height="200"></canvas>
+				<canvas id="connectionsChart" width="300" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -238,7 +238,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Requests (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="requestsChart" width="350" height="200"></canvas>
+				<canvas id="requestsChart" width="300" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -275,7 +275,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Responses_404 (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="r404Chart" width="350" height="200"></canvas>
+				<canvas id="r404Chart" width="300" height="200"></canvas>
 					<script>
 
 						var data = {
