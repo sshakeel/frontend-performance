@@ -41,7 +41,7 @@
 		//echo "Load Time(int): " . (($test_results_item['average_fv']['loadTime'])/1000) . "<br><hr>";
 		array_push($avg_load_times_fv, ($test_results_item['average_fv']['loadTime'])/1000);
 		array_push($avg_load_times_rv, ($test_results_item['average_rv']['loadTime'])/1000);
-		array_push($test_dates, (string)$test_results_item['testdate']);
+		array_push($test_dates, date("F j", $test_results_item['testdate']));
 	}
 	//print_r($avg_load_times_fv);
 	//print_r($avg_load_times_rv);
