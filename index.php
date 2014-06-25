@@ -52,7 +52,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Load Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="myChart" width="350" height="200"></canvas>
+				<canvas id="loadTimeChart" width="350" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -76,8 +76,8 @@
 						}
 
 						//Get the context of the canvas element we want to select
-						var ctx = document.getElementById("myChart").getContext("2d");
-						var myNewChart = new Chart(ctx).Line(data);
+						var ctx1 = document.getElementById("loadTimeChart").getContext("2d");
+						var theLoadTimeChart = new Chart(ctx1).Line(data);
 
 
 					</script>
@@ -89,7 +89,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Load Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="myChart" width="350" height="200"></canvas>
+				<canvas id="ttfbChart" width="350" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -113,8 +113,8 @@
 						}
 
 						//Get the context of the canvas element we want to select
-						var ctx = document.getElementById("myChart").getContext("2d");
-						var myNewChart = new Chart(ctx).Line(data);
+						var ctx2 = document.getElementById("ttfbChart").getContext("2d");
+						var theTTFBChart = new Chart(ctx2).Line(data);
 
 
 					</script>
@@ -126,7 +126,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Load Time (First View vs Repeat)</div>
 			<div class="panel-body">
-				<canvas id="myChart" width="350" height="200"></canvas>
+				<canvas id="renderChart" width="350" height="200"></canvas>
 					<script>
 
 						var data = {
@@ -150,8 +150,8 @@
 						}
 
 						//Get the context of the canvas element we want to select
-						var ctx = document.getElementById("myChart").getContext("2d");
-						var myNewChart = new Chart(ctx).Line(data);
+						var ctx3 = document.getElementById("renderChart").getContext("2d");
+						var theRenderChart = new Chart(ctx3).Line(data);
 
 
 					</script>
