@@ -23,31 +23,28 @@
 		//echo $test_results[$i]['testdate'];
 
 		$test_results[$i]['average_fv'] = json_decode($row['average_fv'], true);
-		print_r($test_results[$i]['average_fv']);
-		echo "<hr><hr>";
+		//print_r($test_results[$i]['average_fv']);
+		//echo "<hr><hr>";
 
 		$test_results[$i]['average_rv'] = json_decode($row['average_rv'], true);
-		print_r($test_results[$i]['average_rv']);
-		echo "<hr><hr>";
+		//print_r($test_results[$i]['average_rv']);
+		//echo "<hr><hr>";
 
 		$i++;
 	}
 
 	$avg_load_times_fv = array();
-	foreach($test_results as $test_results_item){
-		echo "Load Time: ".$test_results_item['average_fv']['loadTime']."<br>";
-		echo "Load Time(int): " . (($test_results_item['average_fv']['loadTime'])/1000) . "<br><hr>";
-		array_push($avg_load_times_fv, ($test_results_item['average_fv']['loadTime'])/1000);
-	}
-	print_r($avg_load_times_fv);
-
 	$avg_load_times_rv = array();
+	$test_dates = array();
 	foreach($test_results as $test_results_item){
-		echo "Load Time: ".$test_results_item['average_rv']['loadTime']."<br>";
-		echo "Load Time(int): " . (($test_results_item['average_rv']['loadTime'])/1000) . "<br><hr>";
+		//echo "Load Time: ".$test_results_item['average_fv']['loadTime']."<br>";
+		//echo "Load Time(int): " . (($test_results_item['average_fv']['loadTime'])/1000) . "<br><hr>";
+		array_push($avg_load_times_fv, ($test_results_item['average_fv']['loadTime'])/1000);
 		array_push($avg_load_times_rv, ($test_results_item['average_rv']['loadTime'])/1000);
+		array_push($avg_load_times_rv, $test_results_item['testdate']);
 	}
-	print_r($avg_load_times_rv);
+	//print_r($avg_load_times_fv);
+	//print_r($avg_load_times_rv);
 ?>
 
 <div class="row">
@@ -56,7 +53,7 @@
 		<script>
 
 			var data = {
-				labels : ["January","February","March","April","May","June","July"],
+				labels : [<?php echo implode(',', $test_dates); ?>],
 				datasets : [
 					{
 						fillColor : "rgba(220,220,220,0.5)",
