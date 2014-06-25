@@ -272,8 +272,23 @@
 		
 	</div>
 	<?php
+		
 		$panel_class = "panel-default"; 
-		if(in_array(1, $avg_404_fv) || in_array(1, $avg_404_rv)) {
+		
+		$error_count_fv = array_filter(
+					    $avg_404_fv,
+					    function ($value) {
+					        return ($value > 1);
+					    }
+					);
+		$error_count_rv = array_filter(
+					    $avg_404_rv,
+					    function ($value) {
+					        return ($value > 1);
+					    }
+					);
+
+		if($error_count_fv > 0 || $error_count_rv > 0) {
 			$panel_class = "panel-warning";
 		} 
 	?>
