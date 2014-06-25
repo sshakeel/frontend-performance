@@ -271,8 +271,14 @@
 		</div>
 		
 	</div>
+	<?php
+		$panel_class = "panel-default"; 
+		if(in_array(1, $avg_404_fv) || in_array(1, $avg_404_rv)) {
+			$panel_class = "panel-warning";
+		} 
+	?>
 	<div class="col-md-4">
-		<div class="panel panel-default">
+		<div class="panel <?php echo $panel_class; ?> ">
 			<div class="panel-heading">Responses_404 (First View vs Repeat)</div>
 			<div class="panel-body no-padding">
 				<canvas id="r404Chart" width="300" height="200"></canvas>
