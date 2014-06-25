@@ -6,7 +6,9 @@
 	$test_results = array();
 
 	$result = mysql_query("SELECT * FROM webpagetest WHERE testdate >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)");
+	
 	$i = 0;
+	
 	while($row = mysql_fetch_array($result)){
 		$test_results[$i]['id'] = $row['id'];
 		$test_results[$i]['testID'] = $row['testID'];
@@ -18,7 +20,7 @@
 
 	$load_times = array();
 	foreach($test_results[$i]['average_fv'] as $average_fv_item){
-		array_push($load_times, intval($average_fv_item[loadTime]));
+		array_push($load_times, intval($average_fv_item['loadTime']));
 	}
 
 ?>
