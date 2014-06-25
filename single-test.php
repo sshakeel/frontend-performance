@@ -2,10 +2,12 @@
 <?php require_once("functions.php"); ?>
 <?php include("header.php"); ?>
 <?php 
-	$testID1 = "140621_Z6_51V";
-	$testID2 = "140625_E0_41X";
+	//$testID1 = "140621_Z6_51V";
+	//$testID2 = "140625_E0_41X";
 
-	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID2.'/';
+	$testID = "140625_E0_41X";
+
+	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
 
 	$xml = simplexml_load_file($xml_url);
