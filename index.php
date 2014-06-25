@@ -49,36 +49,41 @@
 
 <div class="row">
 	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Load Time (First View vs Repeat)</div>
+			<div class="panel-body">
+				<canvas id="myChart" width="300" height="200"></canvas>
+					<script>
 
-		<canvas id="myChart" width="300" height="200"></canvas>
-		<script>
+						var data = {
+							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
+							datasets : [
+								{
+									fillColor : "rgba(100,100,100,0.3)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_load_times_rv); ?>]
+								},
+								{
+									fillColor : "rgba(151,187,205,0.3)",
+									strokeColor : "rgba(151,187,205,1)",
+									pointColor : "rgba(151,187,205,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_load_times_fv); ?>]
+								}
+							]
+						}
 
-			var data = {
-				labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
-				datasets : [
-					{
-						fillColor : "rgba(100,100,100,0.3)",
-						strokeColor : "rgba(220,220,220,1)",
-						pointColor : "rgba(220,220,220,1)",
-						pointStrokeColor : "#fff",
-						data : [<?php echo implode(',', $avg_load_times_rv); ?>]
-					},
-					{
-						fillColor : "rgba(151,187,205,0.3)",
-						strokeColor : "rgba(151,187,205,1)",
-						pointColor : "rgba(151,187,205,1)",
-						pointStrokeColor : "#fff",
-						data : [<?php echo implode(',', $avg_load_times_fv); ?>]
-					}
-				]
-			}
-
-			//Get the context of the canvas element we want to select
-			var ctx = document.getElementById("myChart").getContext("2d");
-			var myNewChart = new Chart(ctx).Line(data);
+						//Get the context of the canvas element we want to select
+						var ctx = document.getElementById("myChart").getContext("2d");
+						var myNewChart = new Chart(ctx).Line(data);
 
 
-		</script>
+					</script>
+				</div>
+		</div>
+		
 	</div>
 </div>
 	
