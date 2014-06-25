@@ -44,6 +44,15 @@
 	$avg_fullyLoaded_times_fv = array();
 	$avg_fullyLoaded_times_rv = array();
 
+	$avg_connections_fv = array();
+	$avg_connections_rv = array();
+
+	$avg_requests_fv = array();
+	$avg_requests_rv = array();
+
+	$avg_404_fv = array();
+	$avg_404_rv = array();
+
 	foreach($test_results as $test_results_item){
 		//echo "Load Time: ".$test_results_item['average_fv']['loadTime']."<br>";
 		//echo "Load Time(int): " . (($test_results_item['average_fv']['loadTime'])/1000) . "<br><hr>";
@@ -57,6 +66,15 @@
 
 		array_push($avg_fullyLoaded_times_fv, ($test_results_item['average_fv']['fullyLoaded'])/1000);
 		array_push($avg_fullyLoaded_times_rv, ($test_results_item['average_rv']['fullyLoaded'])/1000);
+
+		array_push($avg_requests_fv, $test_results_item['average_fv']['connections']);
+		array_push($avg_requests_rv, $test_results_item['average_rv']['connections']);
+
+		array_push($avg_requests_fv, $test_results_item['average_fv']['requests']);
+		array_push($avg_requests_rv, $test_results_item['average_rv']['requests']);
+
+		array_push($avg_404_fv, $test_results_item['average_fv']['responses_404']);
+		array_push($avg_404_rv, $test_results_item['average_rv']['responses_404']);
 		
 	}
 	//print_r($avg_load_times_fv);
@@ -130,8 +148,8 @@
 						}
 
 						//Get the context of the canvas element we want to select
-						var ctx3 = document.getElementById("renderChart").getContext("2d");
-						var theRenderChart = new Chart(ctx3).Line(data);
+						var ctx2 = document.getElementById("renderChart").getContext("2d");
+						var theRenderChart = new Chart(ctx2).Line(data);
 
 
 					</script>
@@ -167,8 +185,122 @@
 						}
 
 						//Get the context of the canvas element we want to select
-						var ctx2 = document.getElementById("fullyLoadedChart").getContext("2d");
-						var theFullyLoadedChart = new Chart(ctx2).Line(data);
+						var ctx3 = document.getElementById("fullyLoadedChart").getContext("2d");
+						var theFullyLoadedChart = new Chart(ctx3).Line(data);
+
+
+					</script>
+				</div>
+		</div>
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">Connections (First View vs Repeat)</div>
+			<div class="panel-body">
+				<canvas id="connectionsChart" width="350" height="200"></canvas>
+					<script>
+
+						var data = {
+							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
+							datasets : [
+								{
+									fillColor : "rgba(100,100,100,0.3)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_connections_rv); ?>]
+								},
+								{
+									fillColor : "rgba(151,187,205,0.3)",
+									strokeColor : "rgba(151,187,205,1)",
+									pointColor : "rgba(151,187,205,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_connections_fv); ?>]
+								}
+							]
+						}
+
+						//Get the context of the canvas element we want to select
+						var ctx4 = document.getElementById("connectionsChart").getContext("2d");
+						var theConnectionsChart = new Chart(ctx4).Line(data);
+
+
+					</script>
+				</div>
+		</div>
+		
+	</div>
+	
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">Requests (First View vs Repeat)</div>
+			<div class="panel-body">
+				<canvas id="requestsChart" width="350" height="200"></canvas>
+					<script>
+
+						var data = {
+							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
+							datasets : [
+								{
+									fillColor : "rgba(100,100,100,0.3)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_requests_rv); ?>]
+								},
+								{
+									fillColor : "rgba(151,187,205,0.3)",
+									strokeColor : "rgba(151,187,205,1)",
+									pointColor : "rgba(151,187,205,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_requests_fv); ?>]
+								}
+							]
+						}
+
+						//Get the context of the canvas element we want to select
+						var ctx5 = document.getElementById("requestsChart").getContext("2d");
+						var theRequestsChart = new Chart(ctx5).Line(data);
+
+
+					</script>
+				</div>
+		</div>
+		
+	</div>
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">Responses_404 (First View vs Repeat)</div>
+			<div class="panel-body">
+				<canvas id="r404Chart" width="350" height="200"></canvas>
+					<script>
+
+						var data = {
+							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
+							datasets : [
+								{
+									fillColor : "rgba(100,100,100,0.3)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_404_rv); ?>]
+								},
+								{
+									fillColor : "rgba(151,187,205,0.3)",
+									strokeColor : "rgba(151,187,205,1)",
+									pointColor : "rgba(151,187,205,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_404_fv); ?>]
+								}
+							]
+						}
+
+						//Get the context of the canvas element we want to select
+						var ctx6 = document.getElementById("r404Chart").getContext("2d");
+						var theR404Chart = new Chart(ctx6).Line(data);
 
 
 					</script>
