@@ -4,9 +4,9 @@
 <?php 
 	
 	
-	$result = mysql_query("SELECT * FROM webpagetest WHERE '$where'");
-	$row = mysql_fetch_array($result);
-	return $row;
+	// $result = mysql_query("SELECT * FROM webpagetest WHERE '$where'");
+	// $row = mysql_fetch_array($result);
+	// return $row;
 
 ?>
 
