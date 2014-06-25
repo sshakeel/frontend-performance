@@ -11,10 +11,19 @@
 	
 	while($row = mysql_fetch_array($result)){
 		$test_results[$i]['id'] = $row['id'];
+		echo $test_results[$i]['id'];
+
 		$test_results[$i]['testID'] = $row['testID'];
+		echo $test_results[$i]['testID'];
+
 		$test_results[$i]['url'] = $row['url'];
+		echo $test_results[$i]['url'];
+
 		$test_results[$i]['testdate'] = $row['testdate'];
+		echo $test_results[$i]['testdate'];
+
 		$test_results[$i]['average_fv'] = json_decode($row['average_fv'], true);
+		print_r($test_results[$i]['average_fv']);
 		$i++;
 	}
 
