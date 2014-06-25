@@ -29,8 +29,6 @@
 	<div class="col-md-12">
 		<canvas id="myChart" width="600" height="400"></canvas>
 		<script>
-			
-			loadTimeData = new array(<?php echo implode(',', $load_times); ?>);
 
 			var data = {
 				labels : ["January","February","March","April","May","June","July"],
@@ -40,7 +38,7 @@
 						strokeColor : "rgba(220,220,220,1)",
 						pointColor : "rgba(220,220,220,1)",
 						pointStrokeColor : "#fff",
-						data : loadTimeData
+						data : [<?php echo implode(',', $load_times); ?>]
 					},
 					{
 						fillColor : "rgba(151,187,205,0.5)",
