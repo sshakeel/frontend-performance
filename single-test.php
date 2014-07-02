@@ -5,8 +5,9 @@
 	//$testID1 = "140621_Z6_51V";
 	//$testID2 = "140625_E0_41X";
 	//$testID3 = "140625_VH_TG0";
+	//$testID3 = "140702_EZ_WP8";
 
-	$testID = "140625_VH_TG0";
+	$testID = "140702_EZ_WP8";
 
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
