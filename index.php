@@ -84,7 +84,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Load Time (First View vs Repeat)</div>
+			<div class="panel-heading">Load Time (First View vs Repeat) <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2); ?></span><span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2); ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="loadTimeChart" width="320" height="200"></canvas>
 					<script>
@@ -122,7 +122,7 @@
 	
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Render Time (First View vs Repeat) <span class="pull-right"><span class="avg-fv"><?php echo array_sum($avg_render_times_fv)/count($avg_render_times_fv); ?></span><span class="avg-rv">(<?php echo array_sum($avg_render_times_rv)/count($avg_render_times_rv); ?>)</span></span></div>
+			<div class="panel-heading">Render Time (First View vs Repeat) <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2); ?></span><span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2); ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="renderChart" width="320" height="200"></canvas>
 					<script>
@@ -159,7 +159,7 @@
 	</div>
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Time to Fully Loaded (First View vs Repeat) <span class="pull-right"><span class="avg-fv"><?php echo array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv); ?></span><span class="avg-rv">(<?php echo array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv); ?>)</span></span></div>
+			<div class="panel-heading">Time to Fully Loaded (First View vs Repeat) <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv), 2); ?></span><span class="avg-rv">(<?php echo round(array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv), 2); ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="fullyLoadedChart" width="320" height="200"></canvas>
 					<script>
@@ -198,7 +198,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Connections (First View vs Repeat) <span class="pull-right"><span class="avg-fv"><?php echo array_sum($avg_connections_fv)/count($avg_connections_fv); ?></span><span class="avg-rv">(<?php echo array_sum($avg_connections_rv)/count($avg_connections_rv); ?>)</span></span></div>
+			<div class="panel-heading">Connections (First View vs Repeat) <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_connections_fv)/count($avg_connections_fv), 2); ?></span><span class="avg-rv">(<?php echo round(array_sum($avg_connections_rv)/count($avg_connections_rv), 2); ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="connectionsChart" width="320" height="200"></canvas>
 					<script>
@@ -236,7 +236,7 @@
 	
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Requests (First View vs Repeat) <span class="pull-right"><span class="avg-fv"><?php echo array_sum($avg_requests_fv)/count($avg_requests_fv); ?></span><span class="avg-rv">(<?php echo array_sum($avg_requests_rv)/count($avg_requests_rv); ?>)</span></span></div>
+			<div class="panel-heading">Requests (First View vs Repeat) <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_requests_fv)/count($avg_requests_fv), 2); ?></span><span class="avg-rv">(<?php echo round(array_sum($avg_requests_rv)/count($avg_requests_rv), 2); ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="requestsChart" width="320" height="200"></canvas>
 					<script>
@@ -294,7 +294,7 @@
 	?>
 	<div class="col-md-4">
 		<div class="panel <?php echo $panel_class; ?> ">
-			<div class="panel-heading">Responses_404 (First View vs Repeat) <span class="pull-right"><span class="avg-fv"><?php echo array_sum($avg_404_fv)/count($avg_404_fv); ?></span><span class="avg-rv">(<?php echo array_sum($avg_404_rv)/count($avg_404_rv); ?>)</span></span></div>
+			<div class="panel-heading">Responses_404 (First View vs Repeat) <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_404_fv)/count($avg_404_fv), 2); ?></span><span class="avg-rv">(<?php echo round(array_sum($avg_404_rv)/count($avg_404_rv), 2); ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="r404Chart" width="320" height="200"></canvas>
 					<script>
