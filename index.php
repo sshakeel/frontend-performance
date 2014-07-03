@@ -94,8 +94,8 @@
 							datasets : [
 								{
 									fillColor : "rgba(254,214,116,0.3)",
-									strokeColor : "rgba(254,214,116,0.7)",
-									pointColor : "rgba(254,214,116,0.7)",
+									strokeColor : "rgba(212,151,2,1)",
+									pointColor : "rgba(212,151,2,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_render_times_rv); ?>]
 								},
@@ -131,8 +131,8 @@
 							datasets : [
 								{
 									fillColor : "rgba(254,214,116,0.3)",
-									strokeColor : "rgba(254,214,116,0.7)",
-									pointColor : "rgba(254,214,116,0.7)",
+									strokeColor : "rgba(212,151,2,1)",
+									pointColor : "rgba(212,151,2,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_load_times_rv); ?>]
 								},
@@ -170,8 +170,8 @@
 							datasets : [
 								{
 									fillColor : "rgba(254,214,116,0.3)",
-									strokeColor : "rgba(254,214,116,0.7)",
-									pointColor : "rgba(254,214,116,0.7)",
+									strokeColor : "rgba(212,151,2,1)",
+									pointColor : "rgba(212,151,2,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_fullyLoaded_times_rv); ?>]
 								},
@@ -209,8 +209,8 @@
 							datasets : [
 								{
 									fillColor : "rgba(254,214,116,0.3)",
-									strokeColor : "rgba(254,214,116,0.7)",
-									pointColor : "rgba(254,214,116,0.7)",
+									strokeColor : "rgba(212,151,2,1)",
+									pointColor : "rgba(212,151,2,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_connections_rv); ?>]
 								},
@@ -247,8 +247,8 @@
 							datasets : [
 								{
 									fillColor : "rgba(254,214,116,0.3)",
-									strokeColor : "rgba(254,214,116,0.7)",
-									pointColor : "rgba(254,214,116,0.7)",
+									strokeColor : "rgba(212,151,2,1)",
+									pointColor : "rgba(212,151,2,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_requests_rv); ?>]
 								},
@@ -305,8 +305,8 @@
 							datasets : [
 								{
 									fillColor : "rgba(254,214,116,0.3)",
-									strokeColor : "rgba(254,214,116,0.7)",
-									pointColor : "rgba(254,214,116,0.7)",
+									strokeColor : "rgba(212,151,2,1)",
+									pointColor : "rgba(212,151,2,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_404_rv); ?>]
 								},
