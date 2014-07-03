@@ -10,14 +10,23 @@
 
 	$testID = "140703_KN_HJZ";
 
+
+
+	$comp_testID = "";
+
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
+	
+	$comp_xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 
 	$xml = simplexml_load_file($xml_url);
 	//var_dump($xml);
 
+	$comp_xml = simplexml_load_file($xml_url);
+
 	
 	$url = $xml->data->testUrl;
+	$comp_url = $comp_xml->data->testUrl;
 	
 	$test_date = date('Y-m-d', strtotime($xml->data->completed));
 	$average_fv = array('loadTime'=> (int)$xml->data->average->firstView[0]->loadTime, 
@@ -50,13 +59,44 @@
 						'score_minify'=> (int)$xml->data->average->repeatView[0]->score_minify, 
 						'score_compress'=> (int)$xml->data->average->repeatView[0]->score_compress);
 
-	print_r($average_fv);
-
 	$average_fv = json_encode($average_fv);
 	$average_rv = json_encode($average_rv);
-	echo $average_fv;
 
-	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average_fv, average_rv, runs) VALUES('$testID', '$url', '$test_date', '$average_fv', '$average_rv', '')");
+
+	$comp_average_fv = array('loadTime'=> (int)$comp_xml->data->average->firstView[0]->loadTime, 
+						'TTFB'=> (int)$comp_xml->data->average->firstView[0]->TTFB, 
+						'connections'=> (int)$comp_xml->data->average->firstView[0]->connections, 
+						'requests'=> (int)$comp_xml->data->average->firstView[0]->requests, 
+						'responses_404'=> (int)$comp_xml->data->average->firstView[0]->responses_404, 
+						'render'=> (int)$comp_xml->data->average->firstView[0]->render, 
+						'fullyLoaded'=> (int)$comp_xml->data->average->firstView[0]->fullyLoaded, 
+						'score_cache'=> (int)$comp_xml->data->average->firstView[0]->score_cache, 
+						'score_cdn'=> (int)$comp_xml->data->average->firstView[0]->score_cdn, 
+						'score_gzip'=> (int)$comp_xml->data->average->firstView[0]->score_gzip, 
+						'score_cookies'=> (int)$comp_xml->data->average->firstView[0]->score_cookies, 
+						'score_keep-alive'=> (int)$comp_xml->data->average->firstView[0]->score_keep-alive, 
+						'score_minify'=> (int)$comp_xml->data->average->firstView[0]->score_minify, 
+						'score_compress'=> (int)$comp_xml->data->average->firstView[0]->score_compress);
+	
+	$comp_average_rv = array('loadTime'=> (int)$comp_xml->data->average->repeatView[0]->loadTime, 
+						'TTFB'=> (int)$comp_xml->data->average->repeatView[0]->TTFB, 
+						'connections'=> (int)$comp_xml->data->average->repeatView[0]->connections, 
+						'requests'=> (int)$comp_xml->data->average->repeatView[0]->requests, 
+						'responses_404'=> (int)$comp_xml->data->average->repeatView[0]->responses_404, 
+						'render'=> (int)$comp_xml->data->average->repeatView[0]->render, 
+						'fullyLoaded'=> (int)$comp_xml->data->average->repeatView[0]->fullyLoaded, 
+						'score_cache'=> (int)$comp_xml->data->average->repeatView[0]->score_cache, 
+						'score_cdn'=> (int)$comp_xml->data->average->repeatView[0]->score_cdn, 
+						'score_gzip'=> (int)$comp_xml->data->average->repeatView[0]->score_gzip, 
+						'score_cookies'=> (int)$comp_xml->data->average->repeatView[0]->score_cookies, 
+						'score_keep-alive'=> (int)$comp_xml->data->average->repeatView[0]->score_keep-alive, 
+						'score_minify'=> (int)$comp_xml->data->average->repeatView[0]->score_minify, 
+						'score_compress'=> (int)$comp_xml->data->average->repeatView[0]->score_compress);
+
+	$comp_average_fv = json_encode($comp_average_fv);
+	$comp_average_rv = json_encode($comp_average_rv);
+
+	mysql_query("INSERT INTO webpagetest (testID, url, testdate, average_fv, average_rv, comp_testID, comp_url, comp_average_fv, comp_average_rv, runs) VALUES('$testID', '$url', '$test_date', '$average_fv', '$average_rv', '$comp_testID', '$comp_url', '$comp_average_fv', '$comp_average_rv', '')");
 
 	// or...........
 	// foreach ($xml->bbb->cccc as $element) {
