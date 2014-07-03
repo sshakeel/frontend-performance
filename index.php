@@ -84,6 +84,43 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
+			<div class="panel-heading">Render Time<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span></div></div>
+			<div class="panel-body ">
+				<canvas id="renderChart" width="320" height="200"></canvas>
+					<script>
+
+						var data = {
+							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
+							datasets : [
+								{
+									fillColor : "rgba(100,100,100,0.3)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_render_times_rv); ?>]
+								},
+								{
+									fillColor : "rgba(151,187,205,0.3)",
+									strokeColor : "rgba(151,187,205,1)",
+									pointColor : "rgba(151,187,205,1)",
+									pointStrokeColor : "#fff",
+									data : [<?php echo implode(',', $avg_render_times_fv); ?>]
+								}
+							]
+						}
+
+						//Get the context of the canvas element we want to select
+						var ctx2 = document.getElementById("renderChart").getContext("2d");
+						var theRenderChart = new Chart(ctx2).Line(data);
+
+
+					</script>
+				</div>
+		</div>
+		
+	</div>
+	<div class="col-md-4">
+		<div class="panel panel-default">
 			<div class="panel-heading">Load Time<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="loadTimeChart" width="320" height="200"></canvas>
@@ -120,43 +157,7 @@
 		
 	</div>
 	
-	<div class="col-md-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">Render Time<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span></div></div>
-			<div class="panel-body ">
-				<canvas id="renderChart" width="320" height="200"></canvas>
-					<script>
-
-						var data = {
-							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
-							datasets : [
-								{
-									fillColor : "rgba(100,100,100,0.3)",
-									strokeColor : "rgba(220,220,220,1)",
-									pointColor : "rgba(220,220,220,1)",
-									pointStrokeColor : "#fff",
-									data : [<?php echo implode(',', $avg_render_times_rv); ?>]
-								},
-								{
-									fillColor : "rgba(151,187,205,0.3)",
-									strokeColor : "rgba(151,187,205,1)",
-									pointColor : "rgba(151,187,205,1)",
-									pointStrokeColor : "#fff",
-									data : [<?php echo implode(',', $avg_render_times_fv); ?>]
-								}
-							]
-						}
-
-						//Get the context of the canvas element we want to select
-						var ctx2 = document.getElementById("renderChart").getContext("2d");
-						var theRenderChart = new Chart(ctx2).Line(data);
-
-
-					</script>
-				</div>
-		</div>
-		
-	</div>
+	
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">Time to Fully Loaded<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv), 2) . "s"; ?>)</span></div></div>
