@@ -122,14 +122,14 @@
 		array_push($comp_avg_fullyLoaded_times_fv, ($test_results_item['comp_average_fv']['fullyLoaded'])/1000);
 		array_push($comp_avg_fullyLoaded_times_rv, ($test_results_item['comp_average_rv']['fullyLoaded'])/1000);
 
-		array_push($comp_avg_connections_fv, $test_results_item['comp_average_fv']['connections']);
-		array_push($comp_avg_connections_rv, $test_results_item['comp_average_rv']['connections']);
+		array_push($comp_avg_connections_fv, ($test_results_item['comp_average_fv']['connections'])+0);
+		array_push($comp_avg_connections_rv, ($test_results_item['comp_average_rv']['connections'])+0);
 
-		array_push($comp_avg_requests_fv, $test_results_item['comp_average_fv']['requests']);
-		array_push($comp_avg_requests_rv, $test_results_item['comp_average_rv']['requests']);
+		array_push($comp_avg_requests_fv, ($test_results_item['comp_average_fv']['requests'])+0);
+		array_push($comp_avg_requests_rv, ($test_results_item['comp_average_rv']['requests'])+0);
 
-		array_push($comp_avg_404_fv, $test_results_item['comp_average_fv']['responses_404']);
-		array_push($comp_avg_404_rv, $test_results_item['comp_average_rv']['responses_404']);
+		array_push($comp_avg_404_fv, ($test_results_item['comp_average_fv']['responses_404'])+0);
+		array_push($comp_avg_404_rv, ($test_results_item['comp_average_rv']['responses_404'])+0);
 		
 	}
 	//print_r($avg_load_times_fv);
