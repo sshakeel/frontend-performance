@@ -160,7 +160,7 @@
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_render_times_fv); ?>]
-								}
+								},
 								{
 									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
@@ -212,7 +212,7 @@
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_load_times_fv); ?>]
-								}
+								},
 								{
 									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
@@ -265,7 +265,7 @@
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_fullyLoaded_times_fv); ?>]
-								}
+								},
 								{
 									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
@@ -318,7 +318,7 @@
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_connections_fv); ?>]
-								}
+								},
 								{
 									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
@@ -371,7 +371,7 @@
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_requests_fv); ?>]
-								}
+								},
 								{
 									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
@@ -443,7 +443,7 @@
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_404_fv); ?>]
-								}
+								},
 								{
 									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
