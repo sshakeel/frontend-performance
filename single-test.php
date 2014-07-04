@@ -23,7 +23,7 @@
 	$xml = simplexml_load_file($xml_url);
 	//var_dump($xml);
 
-	$comp_xml = simplexml_load_file($xml_url);
+	$comp_xml = simplexml_load_file($comp_xml_url);
 
 	
 	$url = $xml->data->testUrl;
