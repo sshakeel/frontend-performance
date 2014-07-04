@@ -141,7 +141,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				
-				<strong>Render Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+				<strong>Render Time</strong><br>
 			</div>
 			<div class="panel-body ">
 				<canvas id="renderChart" width="500" height="350"></canvas>
@@ -208,7 +208,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				
-				<strong>Load Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+				<strong>Load Time</strong><br>
 			</div>
 			<div class="panel-body ">
 				<canvas id="loadTimeChart" width="500" height="350"></canvas>
@@ -276,7 +276,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				
-				<strong>Time to Fully Loaded</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+				<strong>Time to Fully Loaded</strong><br>
 			</div>
 			<div class="panel-body ">
 				<canvas id="fullyLoadedChart" width="500" height="350"></canvas>
@@ -342,7 +342,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				
-				<strong>Connections</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+				<strong>Connections</strong><br>
 			</div>
 			<div class="panel-body ">
 				<canvas id="connectionsChart" width="500" height="350"></canvas>
@@ -409,7 +409,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				
-				<strong>Requests</strong><br><span class="text-muted">(First View vs Repeat)</span> </div>
+				<strong>Requests</strong><br></div>
 			<div class="panel-body ">
 				<canvas id="requestsChart" width="500" height="350"></canvas>
 					<script>
@@ -495,7 +495,7 @@
 		<div class="panel <?php echo $panel_class; ?> ">
 			<div class="panel-heading">
 				
-				<strong>Responses_404</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+				<strong>Responses_404</strong><br>
 			</div>
 			<div class="panel-body ">
 				<canvas id="r404Chart" width="500" height="350"></canvas>

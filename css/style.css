@@ -6,6 +6,10 @@ canvas {
 .panel-body {
 	padding: 5px;
 }
+.panel-footer {
+	background-color: #fff;
+	border-top: 0;
+}
 .avg-fv{
 	color: #1d5081;
 }
