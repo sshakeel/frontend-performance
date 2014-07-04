@@ -140,12 +140,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<div class="pull-right">
-					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> 
-					<span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span><br>
-					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_render_times_fv)/count($comp_avg_render_times_fv), 2) . "s"; ?></span> 
-					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_render_times_rv)/count($comp_avg_render_times_rv), 2) . "s"; ?>)</span>
-				</div>
+				
 				<strong>Render Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
 			</div>
 			<div class="panel-body ">
@@ -193,7 +188,15 @@
 
 
 					</script>
+			</div>
+			<div class="panel-footer">
+				<div class="pull-right">
+					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span><br>
+					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_render_times_fv)/count($comp_avg_render_times_fv), 2) . "s"; ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_render_times_rv)/count($comp_avg_render_times_rv), 2) . "s"; ?>)</span>
 				</div>
+			</div>
 		</div>
 		
 	</div>
@@ -201,10 +204,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="pull-right">
-					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> 
-					<span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span><br>
-					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_load_times_fv)/count($comp_avg_load_times_fv), 2) . "s"; ?></span> 
-					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_load_times_rv)/count($comp_avg_load_times_rv), 2) . "s"; ?>)</span>
+					
 				</div>
 				<strong>Load Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
 			</div>
@@ -252,7 +252,13 @@
 
 
 					</script>
-				</div>
+			</div>
+			<div class="panel-footer">
+				<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> 
+				<span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span><br>
+				<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_load_times_fv)/count($comp_avg_load_times_fv), 2) . "s"; ?></span> 
+				<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_load_times_rv)/count($comp_avg_load_times_rv), 2) . "s"; ?>)</span>
+			</div>
 		</div>
 		
 	</div>
