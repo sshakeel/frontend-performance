@@ -200,6 +200,8 @@
 		</div>
 		
 	</div>
+</div>
+<div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -263,7 +265,8 @@
 		</div>
 		
 	</div>
-	
+</div>
+<div class="row">
 	
 	<div class="col-md-4">
 		<div class="panel panel-default">
@@ -392,7 +395,8 @@
 		</div>
 		
 	</div>
-	
+</div>
+<div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -475,6 +479,8 @@
 			$panel_class = "panel-danger";
 		} 
 	?>
+</div>
+<div class="row">
 	<div class="col-md-4">
 		<div class="panel <?php echo $panel_class; ?> ">
 			<div class="panel-heading">
