@@ -11,8 +11,9 @@
 	$testID = "140703_KN_HJZ";
 
 
-
-	$comp_testID = "";
+	//$comp_testID1 = "140704_8Y_GBR";
+	
+	$comp_testID = "140704_8Y_GBR";
 
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
