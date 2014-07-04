@@ -139,7 +139,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Render Time<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span></div></div>
+			<div class="panel-heading"><strong>Render Time</strong><br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span></div></div>
 			<div class="panel-body ">
 				<canvas id="renderChart" width="320" height="200"></canvas>
 					<script>
