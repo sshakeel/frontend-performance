@@ -18,7 +18,7 @@
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
 	
-	$comp_xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
+	$comp_xml_url = 'http://www.webpagetest.org/xmlResult/'.$comp_testID.'/';
 
 	$xml = simplexml_load_file($xml_url);
 	//var_dump($xml);
