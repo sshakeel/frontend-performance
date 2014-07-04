@@ -125,8 +125,8 @@
 		array_push($comp_avg_connections_fv, $test_results_item['comp_average_fv']['connections']);
 		array_push($comp_avg_connections_rv, $test_results_item['comp_average_rv']['connections']);
 
-		array_push($avg_requests_fv, $test_results_item['comp_average_fv']['requests']);
-		array_push($avg_requests_rv, $test_results_item['comp_average_rv']['requests']);
+		array_push($comp_avg_requests_fv, $test_results_item['comp_average_fv']['requests']);
+		array_push($comp_avg_requests_rv, $test_results_item['comp_average_rv']['requests']);
 
 		array_push($comp_avg_404_fv, $test_results_item['comp_average_fv']['responses_404']);
 		array_push($comp_avg_404_rv, $test_results_item['comp_average_rv']['responses_404']);
@@ -139,7 +139,15 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading"><strong>Render Time</strong><br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span></div></div>
+			<div class="panel-heading">
+				<div class="pull-right">
+					<span class="avg-fv"><?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span><br>
+					<span class="comp-avg-fv"><?php echo round(array_sum($comp_avg_render_times_fv)/count($comp_avg_render_times_fv), 2) . "s"; ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_render_times_rv)/count($comp_avg_render_times_rv), 2) . "s"; ?>)</span>
+				</div>
+				<strong>Render Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+			</div>
 			<div class="panel-body ">
 				<canvas id="renderChart" width="320" height="200"></canvas>
 					<script>
@@ -162,16 +170,16 @@
 									data : [<?php echo implode(',', $avg_render_times_fv); ?>]
 								},
 								{
-									fillColor : "rgba(201,225,136,0.3)",
-									strokeColor : "rgba(201,225,136,1)",
-									pointColor : "rgba(201,225,136,1)",
+									fillColor : "rgba(166,206,57,0.3)",
+									strokeColor : "rgba(166,206,57,1)",
+									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_render_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
-									strokeColor : "rgba(166,206,57,1)",
-									pointColor : "rgba(166,206,57,1)",
+									fillColor : "rgba(119,150,37,0.3)",
+									strokeColor : "rgba(119,150,37,1)",
+									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_render_times_fv); ?>]
 								}
@@ -191,7 +199,15 @@
 	</div>
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Load Time<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span></div></div>
+			<div class="panel-heading">
+				<div class="pull-right">
+					<span class="avg-fv"><?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span><br>
+					<span class="comp-avg-fv"><?php echo round(array_sum($comp_avg_load_times_fv)/count($comp_avg_load_times_fv), 2) . "s"; ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_load_times_rv)/count($comp_avg_load_times_rv), 2) . "s"; ?>)</span>
+				</div>
+				<strong>Load Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+			</div>
 			<div class="panel-body ">
 				<canvas id="loadTimeChart" width="320" height="200"></canvas>
 					<script>
@@ -214,16 +230,16 @@
 									data : [<?php echo implode(',', $avg_load_times_fv); ?>]
 								},
 								{
-									fillColor : "rgba(201,225,136,0.3)",
-									strokeColor : "rgba(201,225,136,1)",
-									pointColor : "rgba(201,225,136,1)",
+									fillColor : "rgba(166,206,57,0.3)",
+									strokeColor : "rgba(166,206,57,1)",
+									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_load_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
-									strokeColor : "rgba(166,206,57,1)",
-									pointColor : "rgba(166,206,57,1)",
+									fillColor : "rgba(119,150,37,0.3)",
+									strokeColor : "rgba(119,150,37,1)",
+									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_load_times_fv); ?>]
 								}
@@ -244,7 +260,15 @@
 	
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Time to Fully Loaded<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv), 2) . "s"; ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv), 2) . "s"; ?>)</span></div></div>
+			<div class="panel-heading">
+				<div class="pull-right">
+					<span class="avg-fv"><?php echo round(array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv), 2) . "s"; ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv), 2) . "s"; ?>)</span><br>
+					<span class="comp-avg-fv"><?php echo round(array_sum($comp_avg_fullyLoaded_times_fv)/count($comp_avg_fullyLoaded_times_fv), 2) . "s"; ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_fullyLoaded_times_rv)/count($acomp_vg_fullyLoaded_times_rv), 2) . "s"; ?>)</span>
+				</div>
+				<strong>Time to Fully Loaded</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+			</div>
 			<div class="panel-body ">
 				<canvas id="fullyLoadedChart" width="320" height="200"></canvas>
 					<script>
@@ -267,16 +291,16 @@
 									data : [<?php echo implode(',', $avg_fullyLoaded_times_fv); ?>]
 								},
 								{
-									fillColor : "rgba(201,225,136,0.3)",
-									strokeColor : "rgba(201,225,136,1)",
-									pointColor : "rgba(201,225,136,1)",
+									fillColor : "rgba(166,206,57,0.3)",
+									strokeColor : "rgba(166,206,57,1)",
+									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_fullyLoaded_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
-									strokeColor : "rgba(166,206,57,1)",
-									pointColor : "rgba(166,206,57,1)",
+									fillColor : "rgba(119,150,37,0.3)",
+									strokeColor : "rgba(119,150,37,1)",
+									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_fullyLoaded_times_fv); ?>]
 								}
@@ -297,7 +321,15 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Connections<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_connections_fv)/count($avg_connections_fv), 2); ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_connections_rv)/count($avg_connections_rv), 2); ?>)</span></div></div>
+			<div class="panel-heading">
+				<div class="pull-right">
+					<span class="avg-fv"><?php echo round(array_sum($avg_connections_fv)/count($avg_connections_fv), 2); ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_connections_rv)/count($avg_connections_rv), 2); ?>)</span><br>
+					<span class="comp-avg-fv"><?php echo round(array_sum($comp_avg_connections_fv)/count($comp_avg_connections_fv), 2); ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_connections_rv)/count($comp_avg_connections_rv), 2); ?>)</span>
+				</div>
+				<strong>Connections</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+			</div>
 			<div class="panel-body ">
 				<canvas id="connectionsChart" width="320" height="200"></canvas>
 					<script>
@@ -320,16 +352,16 @@
 									data : [<?php echo implode(',', $avg_connections_fv); ?>]
 								},
 								{
-									fillColor : "rgba(201,225,136,0.3)",
-									strokeColor : "rgba(201,225,136,1)",
-									pointColor : "rgba(201,225,136,1)",
+									fillColor : "rgba(166,206,57,0.3)",
+									strokeColor : "rgba(166,206,57,1)",
+									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_connections_rv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
-									strokeColor : "rgba(166,206,57,1)",
-									pointColor : "rgba(166,206,57,1)",
+									fillColor : "rgba(119,150,37,0.3)",
+									strokeColor : "rgba(119,150,37,1)",
+									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_connections_fv); ?>]
 								}
@@ -350,7 +382,14 @@
 	
 	<div class="col-md-4">
 		<div class="panel panel-default">
-			<div class="panel-heading">Requests<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_requests_fv)/count($avg_requests_fv), 2); ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_requests_rv)/count($avg_requests_rv), 2); ?>)</span></div></div>
+			<div class="panel-heading">
+				<div class="pull-right">
+					<span class="avg-fv"><?php echo round(array_sum($avg_requests_fv)/count($avg_requests_fv), 2); ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_requests_rv)/count($avg_requests_rv), 2); ?>)</span><br>
+					<span class="comp-avg-fv"><?php echo round(array_sum($comp_avg_requests_fv)/count($comp_avg_requests_fv), 2); ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_requests_rv)/count($comp_avg_requests_rv), 2); ?>)</span>
+				</div>
+				<strong>Requests</strong><br><span class="text-muted">(First View vs Repeat)</span> </div>
 			<div class="panel-body ">
 				<canvas id="requestsChart" width="320" height="200"></canvas>
 					<script>
@@ -373,16 +412,16 @@
 									data : [<?php echo implode(',', $avg_requests_fv); ?>]
 								},
 								{
-									fillColor : "rgba(201,225,136,0.3)",
-									strokeColor : "rgba(201,225,136,1)",
-									pointColor : "rgba(201,225,136,1)",
+									fillColor : "rgba(166,206,57,0.3)",
+									strokeColor : "rgba(166,206,57,1)",
+									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_requests_rv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
-									strokeColor : "rgba(166,206,57,1)",
-									pointColor : "rgba(166,206,57,1)",
+									fillColor : "rgba(119,150,37,0.3)",
+									strokeColor : "rgba(119,150,37,1)",
+									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_requests_fv); ?>]
 								}
@@ -422,7 +461,15 @@
 	?>
 	<div class="col-md-4">
 		<div class="panel <?php echo $panel_class; ?> ">
-			<div class="panel-heading">Responses_404<br><span class="text-muted">(First View vs Repeat)</span> <div class="pull-right"><span class="avg-fv"><?php echo round(array_sum($avg_404_fv)/count($avg_404_fv), 2); ?></span> <span class="avg-rv">(<?php echo round(array_sum($avg_404_rv)/count($avg_404_rv), 2); ?>)</span></div></div>
+			<div class="panel-heading">
+				<div class="pull-right">
+					<span class="avg-fv"><?php echo round(array_sum($avg_404_fv)/count($avg_404_fv), 2); ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_404_rv)/count($avg_404_rv), 2); ?>)</span><br>
+					<span class="comp-avg-fv"><?php echo round(array_sum($comp_avg_404_fv)/count($comp_avg_404_fv), 2); ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_404_rv)/count($comp_avg_404_rv), 2); ?>)</span>
+				</div>
+				<strong>Responses_404</strong><br><span class="text-muted">(First View vs Repeat)</span> 
+			</div>
 			<div class="panel-body ">
 				<canvas id="r404Chart" width="320" height="200"></canvas>
 					<script>
@@ -445,16 +492,16 @@
 									data : [<?php echo implode(',', $avg_404_fv); ?>]
 								},
 								{
-									fillColor : "rgba(201,225,136,0.3)",
-									strokeColor : "rgba(201,225,136,1)",
-									pointColor : "rgba(201,225,136,1)",
+									fillColor : "rgba(166,206,57,0.3)",
+									strokeColor : "rgba(166,206,57,1)",
+									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_404_rv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
-									strokeColor : "rgba(166,206,57,1)",
-									pointColor : "rgba(166,206,57,1)",
+									fillColor : "rgba(119,150,37,0.3)",
+									strokeColor : "rgba(119,150,37,1)",
+									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_404_fv); ?>]
 								}
