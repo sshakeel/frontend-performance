@@ -108,8 +108,8 @@
 		array_push($avg_requests_fv, ($test_results_item['average_fv']['requests'])+0);
 		array_push($avg_requests_rv, ($test_results_item['average_rv']['requests'])+0);
 
-		array_push($avg_404_fv, ($test_results_item['average_fv']['responses_404'])=0);
-		array_push($avg_404_rv, ($test_results_item['average_rv']['responses_404'])=0);
+		array_push($avg_404_fv, ($test_results_item['average_fv']['responses_404'])+0);
+		array_push($avg_404_rv, ($test_results_item['average_rv']['responses_404'])+0);
 
 		// competitor stuff
 
