@@ -189,7 +189,7 @@
 
 					</script>
 			</div>
-			<div class="panel-footer">
+			<div class="panel-footer clearfix">
 				<div class="pull-right">
 					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_render_times_fv)/count($avg_render_times_fv), 2) . "s"; ?></span> 
 					<span class="avg-rv">(<?php echo round(array_sum($avg_render_times_rv)/count($avg_render_times_rv), 2) . "s"; ?>)</span><br>
@@ -203,9 +203,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<div class="pull-right">
-					
-				</div>
+				
 				<strong>Load Time</strong><br><span class="text-muted">(First View vs Repeat)</span> 
 			</div>
 			<div class="panel-body ">
@@ -253,11 +251,14 @@
 
 					</script>
 			</div>
-			<div class="panel-footer">
-				<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> 
-				<span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span><br>
-				<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_load_times_fv)/count($comp_avg_load_times_fv), 2) . "s"; ?></span> 
-				<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_load_times_rv)/count($comp_avg_load_times_rv), 2) . "s"; ?>)</span>
+			<div class="panel-footer clearfix">
+				<div class="pull-right">
+					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_load_times_fv)/count($avg_load_times_fv), 2) . "s"; ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_load_times_rv)/count($avg_load_times_rv), 2) . "s"; ?>)</span><br>
+					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_load_times_fv)/count($comp_avg_load_times_fv), 2) . "s"; ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_load_times_rv)/count($comp_avg_load_times_rv), 2) . "s"; ?>)</span>
+				</div>
+
 			</div>
 		</div>
 		
@@ -267,12 +268,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<div class="pull-right">
-					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv), 2) . "s"; ?></span> 
-					<span class="avg-rv">(<?php echo round(array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv), 2) . "s"; ?>)</span><br>
-					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_fullyLoaded_times_fv)/count($comp_avg_fullyLoaded_times_fv), 2) . "s"; ?></span> 
-					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_fullyLoaded_times_rv)/count($acomp_vg_fullyLoaded_times_rv), 2) . "s"; ?>)</span>
-				</div>
+				
 				<strong>Time to Fully Loaded</strong><br><span class="text-muted">(First View vs Repeat)</span> 
 			</div>
 			<div class="panel-body ">
@@ -319,7 +315,15 @@
 
 
 					</script>
+			</div>
+			<div class="panel-footer clearfix">
+				<div class="pull-right">
+					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_fullyLoaded_times_fv)/count($avg_fullyLoaded_times_fv), 2) . "s"; ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_fullyLoaded_times_rv)/count($avg_fullyLoaded_times_rv), 2) . "s"; ?>)</span><br>
+					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_fullyLoaded_times_fv)/count($comp_avg_fullyLoaded_times_fv), 2) . "s"; ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_fullyLoaded_times_rv)/count($acomp_vg_fullyLoaded_times_rv), 2) . "s"; ?>)</span>
 				</div>
+			</div>
 		</div>
 		
 	</div>
@@ -328,12 +332,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<div class="pull-right">
-					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_connections_fv)/count($avg_connections_fv), 2); ?></span> 
-					<span class="avg-rv">(<?php echo round(array_sum($avg_connections_rv)/count($avg_connections_rv), 2); ?>)</span><br>
-					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_connections_fv)/count($comp_avg_connections_fv), 2); ?></span> 
-					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_connections_rv)/count($comp_avg_connections_rv), 2); ?>)</span>
-				</div>
+				
 				<strong>Connections</strong><br><span class="text-muted">(First View vs Repeat)</span> 
 			</div>
 			<div class="panel-body ">
@@ -381,7 +380,15 @@
 
 
 					</script>
+			</div>
+			<div class="panel-footer clearfix">
+				<div class="pull-right">
+					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_connections_fv)/count($avg_connections_fv), 2); ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_connections_rv)/count($avg_connections_rv), 2); ?>)</span><br>
+					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_connections_fv)/count($comp_avg_connections_fv), 2); ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_connections_rv)/count($comp_avg_connections_rv), 2); ?>)</span>
 				</div>
+			</div>
 		</div>
 		
 	</div>
@@ -389,12 +396,7 @@
 	<div class="col-md-4">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<div class="pull-right">
-					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_requests_fv)/count($avg_requests_fv), 2); ?></span> 
-					<span class="avg-rv">(<?php echo round(array_sum($avg_requests_rv)/count($avg_requests_rv), 2); ?>)</span><br>
-					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_requests_fv)/count($comp_avg_requests_fv), 2); ?></span> 
-					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_requests_rv)/count($comp_avg_requests_rv), 2); ?>)</span>
-				</div>
+				
 				<strong>Requests</strong><br><span class="text-muted">(First View vs Repeat)</span> </div>
 			<div class="panel-body ">
 				<canvas id="requestsChart" width="320" height="200"></canvas>
@@ -440,7 +442,15 @@
 
 
 					</script>
+			</div>
+			<div class="panel-footer clearfix">
+				<div class="pull-right">
+					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_requests_fv)/count($avg_requests_fv), 2); ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_requests_rv)/count($avg_requests_rv), 2); ?>)</span><br>
+					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_requests_fv)/count($comp_avg_requests_fv), 2); ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_requests_rv)/count($comp_avg_requests_rv), 2); ?>)</span>
 				</div>
+			</div>
 		</div>
 		
 	</div>
@@ -468,12 +478,7 @@
 	<div class="col-md-4">
 		<div class="panel <?php echo $panel_class; ?> ">
 			<div class="panel-heading">
-				<div class="pull-right">
-					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_404_fv)/count($avg_404_fv), 2); ?></span> 
-					<span class="avg-rv">(<?php echo round(array_sum($avg_404_rv)/count($avg_404_rv), 2); ?>)</span><br>
-					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_404_fv)/count($comp_avg_404_fv), 2); ?></span> 
-					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_404_rv)/count($comp_avg_404_rv), 2); ?>)</span>
-				</div>
+				
 				<strong>Responses_404</strong><br><span class="text-muted">(First View vs Repeat)</span> 
 			</div>
 			<div class="panel-body ">
@@ -520,7 +525,15 @@
 
 
 					</script>
+			</div>
+			<div class="panel-footer clearfix">
+				<div class="pull-right">
+					<span class="avg-fv">XE.com Avg: <?php echo round(array_sum($avg_404_fv)/count($avg_404_fv), 2); ?></span> 
+					<span class="avg-rv">(<?php echo round(array_sum($avg_404_rv)/count($avg_404_rv), 2); ?>)</span><br>
+					<span class="comp-avg-fv">Oanda.com Avg: <?php echo round(array_sum($comp_avg_404_fv)/count($comp_avg_404_fv), 2); ?></span> 
+					<span class="comp-avg-rv">(<?php echo round(array_sum($comp_avg_404_rv)/count($comp_avg_404_rv), 2); ?>)</span>
 				</div>
+			</div>
 		</div>
 		
 	</div>
