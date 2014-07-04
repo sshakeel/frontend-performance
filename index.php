@@ -151,28 +151,26 @@
 							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 							datasets : [
 								{
-									fillColor : "rgba(128,178,226,0.3)",
+									
 									strokeColor : "rgba(128,178,226,1)",
 									pointColor : "rgba(128,178,226,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_render_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(29,80,129,0.3)",
+									
 									strokeColor : "rgba(29,80,129,1)",
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_render_times_fv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
 									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_render_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(119,150,37,0.3)",
 									strokeColor : "rgba(119,150,37,1)",
 									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
@@ -216,28 +214,24 @@
 							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 							datasets : [
 								{
-									fillColor : "rgba(128,178,226,0.3)",
 									strokeColor : "rgba(128,178,226,1)",
 									pointColor : "rgba(128,178,226,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_load_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(29,80,129,0.3)",
 									strokeColor : "rgba(29,80,129,1)",
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_load_times_fv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
 									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_load_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(119,150,37,0.3)",
 									strokeColor : "rgba(119,150,37,1)",
 									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
@@ -282,28 +276,24 @@
 							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 							datasets : [
 								{
-									fillColor : "rgba(128,178,226,0.3)",
 									strokeColor : "rgba(128,178,226,1)",
 									pointColor : "rgba(128,178,226,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_fullyLoaded_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(29,80,129,0.3)",
 									strokeColor : "rgba(29,80,129,1)",
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_fullyLoaded_times_fv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
 									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_fullyLoaded_times_rv); ?>]
 								},
 								{
-									fillColor : "rgba(119,150,37,0.3)",
 									strokeColor : "rgba(119,150,37,1)",
 									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
@@ -346,28 +336,24 @@
 							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 							datasets : [
 								{
-									fillColor : "rgba(128,178,226,0.3)",
 									strokeColor : "rgba(128,178,226,1)",
 									pointColor : "rgba(128,178,226,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_connections_rv); ?>]
 								},
 								{
-									fillColor : "rgba(29,80,129,0.3)",
 									strokeColor : "rgba(29,80,129,1)",
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_connections_fv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
 									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_connections_rv); ?>]
 								},
 								{
-									fillColor : "rgba(119,150,37,0.3)",
 									strokeColor : "rgba(119,150,37,1)",
 									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
@@ -410,28 +396,24 @@
 							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 							datasets : [
 								{
-									fillColor : "rgba(128,178,226,0.3)",
 									strokeColor : "rgba(128,178,226,1)",
 									pointColor : "rgba(128,178,226,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_requests_rv); ?>]
 								},
 								{
-									fillColor : "rgba(29,80,129,0.3)",
 									strokeColor : "rgba(29,80,129,1)",
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_requests_fv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
 									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_requests_rv); ?>]
 								},
 								{
-									fillColor : "rgba(119,150,37,0.3)",
 									strokeColor : "rgba(119,150,37,1)",
 									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
@@ -495,28 +477,24 @@
 							labels : [<?php echo '"' . implode('","', $test_dates) . '"'; ?>],
 							datasets : [
 								{
-									fillColor : "rgba(128,178,226,0.3)",
 									strokeColor : "rgba(128,178,226,1)",
 									pointColor : "rgba(128,178,226,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_404_rv); ?>]
 								},
 								{
-									fillColor : "rgba(29,80,129,0.3)",
 									strokeColor : "rgba(29,80,129,1)",
 									pointColor : "rgba(29,80,129,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $avg_404_fv); ?>]
 								},
 								{
-									fillColor : "rgba(166,206,57,0.3)",
 									strokeColor : "rgba(166,206,57,1)",
 									pointColor : "rgba(166,206,57,1)",
 									pointStrokeColor : "#fff",
 									data : [<?php echo implode(',', $comp_avg_404_rv); ?>]
 								},
 								{
-									fillColor : "rgba(119,150,37,0.3)",
 									strokeColor : "rgba(119,150,37,1)",
 									pointColor : "rgba(119,150,37,1)",
 									pointStrokeColor : "#fff",
