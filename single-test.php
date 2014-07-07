@@ -8,9 +8,9 @@
 	//$testID4 = "140702_EZ_WP8";
 	//$testID5 = "140703_KN_HJZ";
 	//$testID6 = "140704_8M_HHH";
-	//$testID7 = "140707_G4_RHB";
+	//$testID7 = "140707_XY_RZK";
 
-	$testID = "140707_G4_RHB";
+	$testID = "140707_XY_RZK";
 
 
 	//$comp_testID1 = "140704_8Y_GBR";
