@@ -21,9 +21,9 @@
 	//$comp_testID3 = "140707_3H_RJ2";
 	//$comp_testID4 = "140709_TV_JRD";
 	//$comp_testID5 = "140709_AE_JVN";
-	//$comp_testID6 = "140710_D6_RPK";
+	//$comp_testID6 = "140710_P6_RRS";
 
-	$comp_testID = "140710_D6_RPK";
+	$comp_testID = "140710_P6_RRS";
 
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
