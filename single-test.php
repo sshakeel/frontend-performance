@@ -14,8 +14,9 @@
 	//$testID10 = "140710_NC_RP4";
 	//$testID11 = "140711_M5_YWJ";
 	//$testID12 = "140714_FS_JXM";
+	//$testID13 = "140714_7M_K5S";
 
-	$testID = "140714_FS_JXM";
+	$testID = "140714_7M_K5S";
 
 
 	//$comp_testID1 = "140704_8Y_GBR";
@@ -26,8 +27,9 @@
 	//$comp_testID6 = "140710_P6_RRS";
 	//$comp_testID7 = "140711_AD_YWN";
 	//$comp_testID8 = "140714_ES_JXN";
+	//$comp_testID9 = "140714_TK_K5V";
 
-	$comp_testID = "140714_ES_JXN";
+	$comp_testID = "140714_TK_K5V";
 
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
