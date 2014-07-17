@@ -2,36 +2,10 @@
 <?php require_once("functions.php"); ?>
 <?php include("header.php"); ?>
 <?php 
-	//$testID1 = "140621_Z6_51V";
-	//$testID2 = "140625_E0_41X";
-	//$testID3 = "140625_VH_TG0";
-	//$testID4 = "140702_EZ_WP8";
-	//$testID5 = "140703_KN_HJZ";
-	//$testID6 = "140704_8M_HHH";
-	//$testID7 = "140707_XY_RZK";
-	//$testID8 = "140709_ZY_JR0";
-	//$testID9 = "140709_BN_JVC";
-	//$testID10 = "140710_NC_RP4";
-	//$testID11 = "140711_M5_YWJ";
-	//$testID12 = "140714_FS_JXM";
-	//$testID13 = "140714_7M_K5S";
-	//$testID14 = "140716_FH_K4Y";
 
-	$testID = "140716_FH_K4Y";
+	$testID = "140717_MA_VVA";
 
-
-	//$comp_testID1 = "140704_8Y_GBR";
-	//$comp_testID2 = "140704_K9_HH5";
-	//$comp_testID3 = "140707_3H_RJ2";
-	//$comp_testID4 = "140709_TV_JRD";
-	//$comp_testID5 = "140709_AE_JVN";
-	//$comp_testID6 = "140710_P6_RRS";
-	//$comp_testID7 = "140711_AD_YWN";
-	//$comp_testID8 = "140714_ES_JXN";
-	//$comp_testID9 = "140714_TK_K5V";
-	//$comp_testID10 = "140716_FE_K4Z";
-
-	$comp_testID = "140716_FE_K4Z";
+	$comp_testID = "140717_RQ_VVD";
 
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
