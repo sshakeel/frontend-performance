@@ -3,9 +3,9 @@
 <?php include("header.php"); ?>
 <?php 
 
-	$testID = "140721_01_QRW";
+	$testID = "140721_5Z_QXF";
 
-	$comp_testID = "140721_DG_QRX";
+	$comp_testID = "140721_E2_QXG";
 
 	$xml_url = 'http://www.webpagetest.org/xmlResult/'.$testID.'/';
 	//echo "url: ".$url."<br>";
